@@ -23,5 +23,4 @@ export const GreetingMessage = styled.div`
   line-height: 35px;
   font-size: 1.4rem;
   font-family: "Roboto", sans-serif;
-  color: "#001529";
 `;
