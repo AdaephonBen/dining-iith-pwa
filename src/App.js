@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "antd/dist/antd.css";
+import "./App.css";
+import { Layout, Typography } from "antd";
+
+import {
+  WebPageTitle,
+  QRCodeContainer,
+  GreetingMessage
+} from "./styles/AppStyle";
+var QRCode = require("qrcode.react");
+const { Header, Content, Footer } = Layout;
+const { Title } = Typography;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Header>
+          <WebPageTitle>Dining IITH</WebPageTitle>
+          <GreetingMessage>
+            Hello, Vishnu. <br />
+            Registered to UDH. <br />
+            Have a good lunch.
+          </GreetingMessage>
+          <QRCodeContainer>
+            <QRCode
+              value="http://facebook.github.io/react/"
+              size={200}
+              fgColor="#001529"
+            />
+          </QRCodeContainer>
+        </Header>
+      </Layout>
     </div>
   );
 }
